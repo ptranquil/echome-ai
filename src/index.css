@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-paper: #070b12;
+  --color-surface: #0b111a;
+  --color-ink: #e7eef6;
+  --color-muted: #8ea0b5;
+  --color-line: #1d3348;
+  --color-user: #121a26;
+  --color-composer: #0e1622;
+  --color-accent: #7fd4ff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased overflow-x-hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    touch-action: manipulation;
+  }
+
+  ::selection {
+    background: rgba(127, 212, 255, 0.28);
+    color: #f4fbff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #24384c;
+    border-radius: 999px;
+  }
+}
+
+@layer utilities {
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  .chamber {
+    background-image:
+      radial-gradient(ellipse 48% 36% at 50% 16%, rgba(127, 212, 255, 0.09), transparent 68%),
+      linear-gradient(rgba(127, 212, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(127, 212, 255, 0.04) 1px, transparent 1px);
+    background-size: auto, 72px 72px, 72px 72px;
+  }
+
+  .halo {
+    box-shadow:
+      0 0 0 1px rgba(127, 212, 255, 0.35),
+      0 0 32px rgba(127, 212, 255, 0.18);
+    animation: halo 4.8s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .halo {
+      animation: none;
+    }
+  }
+}
+
+@keyframes halo {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px rgba(127, 212, 255, 0.28),
+      0 0 24px rgba(127, 212, 255, 0.12);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px rgba(127, 212, 255, 0.55),
+      0 0 42px rgba(127, 212, 255, 0.28);
+  }
+}

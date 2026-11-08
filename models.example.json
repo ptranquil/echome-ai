@@ -1,0 +1,57 @@
+[
+  {
+    "id": "llama32",
+    "label": "Llama 3.2",
+    "provider": "ollama",
+    "baseUrl": "http://localhost:11434/v1",
+    "model": "llama3.2",
+    "default": true
+  },
+  {
+    "id": "deepseek",
+    "label": "DeepSeek R1 1.5B",
+    "provider": "ollama",
+    "baseUrl": "http://localhost:11434/v1",
+    "model": "deepseek-r1:1.5b"
+  },
+  {
+    "id": "gemini",
+    "label": "Gemini Flash",
+    "provider": "gemini",
+    "baseUrl": "https://generativelanguage.googleapis.com/v1beta",
+    "model": "gemini-3.1-flash-lite",
+    "apiKeyEnv": "GEMINI_API_KEY"
+  },
+  {
+    "id": "groq",
+    "label": "Groq",
+    "provider": "groq",
+    "baseUrl": "https://api.groq.com/openai/v1",
+    "model": "openai/gpt-oss-20b",
+    "apiKeyEnv": "GROQ_API_KEY"
+  },
+  {
+    "id": "openrouter",
+    "label": "OpenRouter",
+    "provider": "openrouter",
+    "baseUrl": "https://openrouter.ai/api/v1",
+    "model": "google/gemini-2.5-flash",
+    "apiKeyEnv": "OPENROUTER_API_KEY"
+  },
+  {
+    "id": "gpt",
+    "label": "GPT",
+    "provider": "openai",
+    "baseUrl": "https://api.openai.com/v1",
+    "model": "gpt-4o-mini",
+    "apiKeyEnv": "OPENAI_API_KEY"
+  },
+  {
+    "id": "grok",
+    "label": "Grok",
+    "provider": "grok",
+    "baseUrl": "https://api.x.ai/v1",
+    "model": "grok-2",
+    "apiKeyEnv": "XAI_API_KEY"
+  }
+]
